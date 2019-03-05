@@ -2,17 +2,23 @@
 //public class DragDrop {
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.chrome.ChromeDriver;
+	//import org.openqa.selenium.chrome.ChromeDriver;
+	//import org.openqa.selenium.ie.InternetExplorerDriver;
+	import org.openqa.selenium.firefox.FirefoxDriver;
 	import org.openqa.selenium.interactions.Actions;
 
 	public class DragDrop {
 
 		public static void main(String[] args) throws InterruptedException {
 			
+			//System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Drivers\\chromedriver.exe");
+			//System.setProperty("webdriver.ie.driver", "C:\\Selenium\\Drivers\\IEDriverServer.exe");
+			System.setProperty("webdriver.gecko.driver","C:\\Selenium\\Drivers\\geckodriver.exe" );
+
 			
-			System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
-			
-			WebDriver driver = new ChromeDriver();
+			//WebDriver driver = new ChromeDriver();
+			//WebDriver driver = new InternetExplorerDriver();
+			WebDriver driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
 			
