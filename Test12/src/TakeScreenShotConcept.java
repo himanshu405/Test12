@@ -9,6 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class TakeScreenShotConcept {
@@ -16,8 +17,9 @@ public class TakeScreenShotConcept {
 	public static void main(String[] args) throws IOException {
 		
 		
-		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\Drivers\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\2017\\git\\Test12\\Test12\\src\\Drivers\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		//WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -34,7 +36,7 @@ public class TakeScreenShotConcept {
 		//FileUtils.copyFile(src, new File ("C:\\Users\\2017\\git\\Test12\\Test12\\src\\google.png")); 
 		
 		
-		driver.quit();
+		//driver.quit();
 		
 	}
 
